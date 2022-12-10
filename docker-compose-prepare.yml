@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    command: python code/myawesomeblog/manage.py makemigrations blog events; python code/myawesomeblog/manage.py migrate
+    volumes:
+      - .:/code    
+    environment:
+      - POSTGRES_NAME=myawesomeblog
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    depends_on:
+      - db
