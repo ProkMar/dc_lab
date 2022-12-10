@@ -2,7 +2,6 @@
 FROM python:3
 ENV PYTHONDOWNWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
-WORKDIR /code
-COPY requirements.txt /code/
-RUN pip install -r requirements.txt
-COPY . /code/
+WORKDIR /myawesomeblog
+COPY . /myawesomeblog/
+RUN python -m pip install -r requirements.txt

@@ -9,4 +9,8 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     depends_on:
+<<<<<<< HEAD
       - db
+=======
+      - db
+>>>>>>> 642331d7d4560e85db6f2b02ef49468127613dd6
