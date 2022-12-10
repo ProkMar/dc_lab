@@ -10,11 +10,10 @@ services:
   web:
     build: .
     command: bash -c "
-      echo "ls"
-      && ls
-      && python manage.py makemigrations blog events
-      && python manage.py migrate
-      && python manage.py runserver 0.0.0.0:8000
+      python myawesomeblog/manage.py makemigrations blog events
+      && sleep 15s
+      && python myawesomeblog/manage.py migrate
+      && python myawesomeblog/manage.py runserver 0.0.0.0:8000
       "
     ports:
       - "8010:8000"
